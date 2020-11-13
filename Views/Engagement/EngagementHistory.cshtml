@@ -1,0 +1,85 @@
+﻿
+@model IEnumerable<OfficerEngagement.Models.Engagement>
+
+@*@{
+        ViewData["Title"] = "EngagementHistory";
+    }*@
+
+<h6>Engagement History</h6>
+
+@*<p>
+    <a asp-action="Create">Create New</a>
+</p>*@
+<form method="post">
+    Start Date: <input type="datetime" name="StartDate"/>
+    End Date: <input type="datetime" name="EndDate"/>
+    <input type="submit" value="Search" class="btn btn-success"/>
+    <a asp-action="EngagementHistory" asp-controller="Engagement">Get all record</a>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.EngId)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.OfficerName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Date)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Time)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Venue)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ChairBy)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Agenda)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Status)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.ToList())
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.EngId)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.OfficerName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Date)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Time)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Venue)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ChairBy)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Agenda)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Status)
+                        </td>
+                        @*<td>
+                            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+                        </td>*@
+                    </tr>
+                }
+        </tbody>
+    </table>
+</form>

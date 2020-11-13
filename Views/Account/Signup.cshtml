@@ -1,0 +1,79 @@
+﻿@model OfficerEngagement.Models.SignUpUserModel
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Signup</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-4">
+                <img src="~/Image/header.jpg" />
+            </div>
+            <div class="col-md-6">
+                <h2 style="font-size:50px">Sign Up Page</h2>
+
+            </div>
+        </div>
+    </div>
+    <hr />
+    <div class="container">
+        @*<h4>Sign Up Page</h4>
+        <hr />*@
+        <div class="row">
+            <div class="col-md-4">
+                <form asp-action="Signup">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div class="form-group">
+                        <label asp-for="firstName" class="control-label"></label>
+                        <input asp-for="firstName" class="form-control" />
+                        <span asp-validation-for="firstName" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="LastName" class="control-label"></label>
+                        <input asp-for="LastName" class="form-control" />
+                        <span asp-validation-for="LastName" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="LoginId" class="control-label"></label>
+                        <input asp-for="LoginId" class="form-control" />
+                        <span asp-validation-for="LoginId" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Password" class="control-label"></label>
+                        <input asp-for="Password" class="form-control" />
+                        <span asp-validation-for="Password" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="ConfirmPassword" class="control-label"></label>
+                        <input asp-for="ConfirmPassword" class="form-control" />
+                        <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="Signup" class="btn btn-primary" />
+                    </div>
+                </form>
+            </div>
+            <div class="col-md-8">
+                <img src="~/Image/signup.jpg" class="img-fluid" />
+            </div>
+        </div>
+
+        <div>
+            <p>Click <a asp-action="Login" asp-controller="Account">here</a> for Login </p>
+        </div>
+    </div>
+
+
+</body>
+</html>

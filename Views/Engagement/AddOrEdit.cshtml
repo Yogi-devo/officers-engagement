@@ -1,0 +1,70 @@
+﻿@model OfficerEngagement.Models.Engagement
+
+@{
+    //ViewData["Title"] = "Create";
+}
+@*@(User.FindFirst("UserFirstName").Value+ " " + User.FindFirst("UserLastName").Value)*@
+@*<h1>Create</h1>*@
+<h4>Add Engagement</h4>
+<hr />
+<div class="row">
+    <div class="col-md-12">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label asp-for="OfficerName" class="control-label"></label>
+                        <input asp-for="OfficerName" class="form-control" />
+                        <span asp-validation-for="OfficerName" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Date" class="control-label"></label>
+                        <input asp-for="Date" class="form-control" />
+                        <span asp-validation-for="Date" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Time" class="control-label"></label>
+                        <input asp-for="Time" class="form-control" />
+                        <span asp-validation-for="Time" class="text-danger"></span>
+                    </div>
+                    
+                </div>
+                <div class="col-md-6">
+
+                    <div class="form-group">
+                        <label asp-for="ChairBy" class="control-label"></label>
+                        <input asp-for="ChairBy" class="form-control" />
+                        <span asp-validation-for="ChairBy" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Agenda" class="control-label"></label>
+                        <textarea asp-for="Agenda" class="form-control"></textarea>
+                        <span asp-validation-for="Agenda" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Venue" class="control-label"></label>
+                        <input asp-for="Venue" class="form-control" />
+                        <span asp-validation-for="Venue" class="text-danger"></span>
+                    </div>
+                    @*<div class="form-group">
+            <label asp-for="Status" class="control-label"></label>
+            <input asp-for="Status" class="form-control" />
+            <span asp-validation-for="Status" class="text-danger"></span>
+        </div>*@
+                </div>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Add Engagement" class="btn btn-primary btn-block" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index" class="btn btn-secondary">Back to Upcoming Engagements</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

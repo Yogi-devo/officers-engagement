@@ -1,0 +1,61 @@
+﻿@model OfficerEngagement.Models.SignInModel
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>zazazazaz
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Login</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-4">
+                <img src="~/Image/header.jpg" />
+            </div>
+            <div class="col-md-6">
+                <h2 style="font-size:50px">Login Page</h2>
+
+            </div>
+        </div>
+    </div>
+    <hr />
+    <div class="container">
+        @*<h4>Login Page</h4>*@
+        <div class="row">
+            <div class="col-md-4">
+                <form method="post">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div class="form-group">
+                        <label asp-for="LoginId" class="control-label"></label>
+                        <input asp-for="LoginId" class="form-control" />
+                        <span asp-validation-for="LoginId" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Password" class="control-label"></label>
+                        <input asp-for="Password" class="form-control" />
+                        <span asp-validation-for="Password" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="Login" class="btn btn-primary" />
+                    </div>
+                </form>
+            </div>
+            <div class="col-md-4">
+                <img src="~/Image/login.png" class="img-fluid" />
+            </div>
+        </div>
+
+        <div>
+            <p>Click <a asp-action="Signup" asp-controller="Account">here</a> for Signup </p>
+        </div>
+
+    </div>
+</body>
+</html>

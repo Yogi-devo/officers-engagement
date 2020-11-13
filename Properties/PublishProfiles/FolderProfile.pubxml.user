@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <_PublishTargetUrl>C:\inetpub\wwwroot\engagementNew</_PublishTargetUrl>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+  </PropertyGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="EngagConnection">
+      <Value>Server=DHISERVER2\SQLEXPRESS%3b Database=EngagementDb%3b  Integrated Security=True%3b Trusted_Connection=True%3b user Id=sa%3b password=root%3b</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
+  <ItemGroup>
+    <EFMigrations Include="OfficerEngagement.Models.EngagementContext">
+      <Value>Server=DHISERVER2\SQLEXPRESS%3b Database=EngagementDb%3b  Integrated Security=True%3b Trusted_Connection=True%3b user Id=sa%3b password=root%3b</Value>
+    </EFMigrations>
+  </ItemGroup>
+</Project>
