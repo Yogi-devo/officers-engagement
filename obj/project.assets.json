@@ -9028,11 +9028,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\OfficerEngagement\\OfficerEngagement\\OfficerEngagement\\OfficerEngagement.csproj",
+      "projectUniqueName": "F:\\OfficerEngagement\\OfficerEngagement.csproj",
       "projectName": "OfficerEngagement",
-      "projectPath": "F:\\OfficerEngagement\\OfficerEngagement\\OfficerEngagement\\OfficerEngagement.csproj",
+      "projectPath": "F:\\OfficerEngagement\\OfficerEngagement.csproj",
       "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
-      "outputPath": "F:\\OfficerEngagement\\OfficerEngagement\\OfficerEngagement\\obj\\",
+      "outputPath": "F:\\OfficerEngagement\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\",
