@@ -8,8 +8,9 @@ namespace OfficerEngagement.Models
 {
     public class ContactModel
     {
-        [Key]
+      [Key]
         public int serialno { get; set; }
+
         public string empcode { get; set; }
         [Required]
         public string empname { get; set; }

@@ -6,6 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.ComponentModel;
 using Microsoft.Azure.KeyVault.Models;
+using System.ComponentModel.DataAnnotations;
 
 namespace OfficerEngagement.Models
 {
@@ -19,5 +20,10 @@ namespace OfficerEngagement.Models
 
         public DbSet<Engagement> Engagements { get; set; }
         public DbSet<Contact> Contacts { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder builder)
+        {
+            base.OnModelCreating(builder);
+        }
     }
 }
