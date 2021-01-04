@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using OfficerEngagement.Models;
 
 namespace OfficerEngagement.Migrations
 {
     [DbContext(typeof(EngagementContext))]
-    partial class EngagementContextModelSnapshot : ModelSnapshot
+    [Migration("20210104101506_newTableAdded")]
+    partial class newTableAdded
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

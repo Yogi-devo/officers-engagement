@@ -19,11 +19,12 @@ namespace OfficerEngagement.Models
         }
 
         public DbSet<Engagement> Engagements { get; set; }
-        public DbSet<Contact> Contacts { get; set; }
+        public DbSet<ContactModel> Contacts { get; set; }
 
-        protected override void OnModelCreating(ModelBuilder builder)
-        {
-            base.OnModelCreating(builder);
-        }
+        
+    }
+
+    public class ContactContext
+    {
     }
 }
