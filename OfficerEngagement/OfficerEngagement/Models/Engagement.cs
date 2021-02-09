@@ -17,11 +17,18 @@ namespace OfficerEngagement.Models
         [DataType(DataType.Time)]
         public string Time { get; set; }
         public string Venue { get; set; }
+        
         [Display(Name ="Chair By")]
         public string ChairBy { get; set; }
         public string Agenda { get; set; }
 
         public int Status { get; set; }
+        public string MeetingMode { get; set; }
+
+        public string dateOfEntry { get; set; } = DateTime.Today.ToString();
+
+        public string OtherParticipant { get; set; }
+        public string Remarks { get; set; }
 
     }
 }

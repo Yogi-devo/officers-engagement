@@ -174,7 +174,6 @@ F:\OfficerEngagement\obj\Release\netcoreapp3.1\OfficerEngagement.dll
 F:\OfficerEngagement\obj\Release\netcoreapp3.1\OfficerEngagement.pdb
 F:\OfficerEngagement\obj\Release\netcoreapp3.1\OfficerEngagement.genruntimeconfig.cache
 F:\OfficerEngagement\OfficerEngagement\OfficerEngagement\bin\Release\netcoreapp3.1\appsettings.Development.json
-F:\OfficerEngagement\OfficerEngagement\OfficerEngagement\bin\Release\netcoreapp3.1\Properties\launchSettings.json
 F:\OfficerEngagement\OfficerEngagement\OfficerEngagement\bin\Release\netcoreapp3.1\appsettings.json
 F:\OfficerEngagement\OfficerEngagement\OfficerEngagement\bin\Release\netcoreapp3.1\OfficerEngagement.exe
 F:\OfficerEngagement\OfficerEngagement\OfficerEngagement\bin\Release\netcoreapp3.1\OfficerEngagement.deps.json
@@ -617,3 +616,10 @@ F:\OfficerEngagement\OfficerEngagement\OfficerEngagement\obj\Release\netcoreapp3
 F:\OfficerEngagement\OfficerEngagement\OfficerEngagement\obj\Release\netcoreapp3.1\OfficerEngagement.dll
 F:\OfficerEngagement\OfficerEngagement\OfficerEngagement\obj\Release\netcoreapp3.1\OfficerEngagement.pdb
 F:\OfficerEngagement\OfficerEngagement\OfficerEngagement\obj\Release\netcoreapp3.1\OfficerEngagement.genruntimeconfig.cache
+F:\OfficerEngagement\OfficerEngagement\OfficerEngagement\bin\Release\netcoreapp3.1\web.config
+F:\OfficerEngagement\OfficerEngagement\OfficerEngagement\bin\Release\netcoreapp3.1\Microsoft.Azure.KeyVault.dll
+F:\OfficerEngagement\OfficerEngagement\OfficerEngagement\bin\Release\netcoreapp3.1\Microsoft.Azure.KeyVault.WebKey.dll
+F:\OfficerEngagement\OfficerEngagement\OfficerEngagement\bin\Release\netcoreapp3.1\Microsoft.Rest.ClientRuntime.dll
+F:\OfficerEngagement\OfficerEngagement\OfficerEngagement\bin\Release\netcoreapp3.1\Microsoft.Rest.ClientRuntime.Azure.dll
+F:\OfficerEngagement\OfficerEngagement\OfficerEngagement\obj\Release\netcoreapp3.1\scopedcss\bundle\OfficerEngagement.styles.css
+F:\OfficerEngagement\OfficerEngagement\OfficerEngagement\obj\Release\netcoreapp3.1\Razor\Views\Contact\Index.cshtml.g.cs

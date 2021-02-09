@@ -30,7 +30,12 @@
                         <input asp-for="Time" class="form-control" />
                         <span asp-validation-for="Time" class="text-danger"></span>
                     </div>
-                   
+                    <div class="form-group">
+                        <label asp-for="OtherParticipant" class="control-label"></label>
+                        <input asp-for="OtherParticipant" class="form-control" />
+                        <span asp-validation-for="OtherParticipant" class="text-danger"></span>
+                    </div>
+
                 </div>
                 <div class="col-md-6">
                     <div class="form-group">
@@ -44,15 +49,21 @@
                         <span asp-validation-for="Agenda" class="text-danger"></span>
                     </div>
                     <div class="form-group">
+                        <label asp-for="MeetingMode" class="control-label"></label>
+                        <input asp-for="MeetingMode" class="form-control" />
+                        <span asp-validation-for="MeetingMode" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
                         <label asp-for="Venue" class="control-label"></label>
                         <input asp-for="Venue" class="form-control" />
                         <span asp-validation-for="Venue" class="text-danger"></span>
                     </div>
-                    @*<div class="form-group">
-                        <label asp-for="Status" class="control-label"></label>
-                        <input asp-for="Status" class="form-control" />
-                        <span asp-validation-for="Status" class="text-danger"></span>
-                    </div>*@
+
+                    <div class="form-group">
+                        <label asp-for="Remarks" class="control-label"></label>
+                        <input asp-for="Remarks" class="form-control" />
+                        <span asp-validation-for="Remarks" class="text-danger"></span>
+                    </div>
                 </div>
                 </div>
             <div class="form-row">

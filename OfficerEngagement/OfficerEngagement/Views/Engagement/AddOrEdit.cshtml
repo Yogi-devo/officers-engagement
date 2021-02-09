@@ -1,7 +1,35 @@
 ﻿@model OfficerEngagement.Models.Engagement
 
+<link href="~/Content/sweetalert/sweet-alert.css" rel="stylesheet" />
+
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+@if (TempData["Message"] != null)
+
+{
+
+    <script>
+
+        debugger
+
+        swal({
+
+            title: "Success!",
+
+            text: "Record Saved Successfully!",
+
+            icon: "success",
+
+        });
+
+    </script>
+    @TempData["Message"]
+}
+
 @{
+    var list = new List<string>() { "VC Mode", "Non-VC Mode", "Other" };
     //ViewData["Title"] = "Create";
+
 }
 @*@(User.FindFirst("UserFirstName").Value+ " " + User.FindFirst("UserLastName").Value)*@
 @*<h1>Create</h1>*@
@@ -28,30 +56,44 @@
                         <input asp-for="Time" class="form-control" />
                         <span asp-validation-for="Time" class="text-danger"></span>
                     </div>
-                    
-                </div>
-                <div class="col-md-6">
-
-                    <div class="form-group">
-                        <label asp-for="ChairBy" class="control-label"></label>
-                        <input asp-for="ChairBy" class="form-control" />
-                        <span asp-validation-for="ChairBy" class="text-danger"></span>
-                    </div>
                     <div class="form-group">
                         <label asp-for="Agenda" class="control-label"></label>
                         <textarea asp-for="Agenda" class="form-control"></textarea>
                         <span asp-validation-for="Agenda" class="text-danger"></span>
                     </div>
                     <div class="form-group">
+                        <label asp-for="ChairBy" class="control-label"></label>
+                        <input asp-for="ChairBy" class="form-control" />
+                        <span asp-validation-for="ChairBy" class="text-danger"></span>
+                    </div>
+
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label asp-for="OtherParticipant" class="control-label"></label>
+                        <input asp-for="OtherParticipant" class="form-control" />
+                        <span asp-validation-for="OtherParticipant" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="MeetingMode" class="control-label"></label>
+                        @Html.DropDownListFor(model => model.MeetingMode, new SelectList(list), "Select Meeting Mode", new { @class = "form-control" })
+                        @*<input asp-for="MeetingMode" class="form-control" />*@
+                        @*<select asp-for="MeetingMode" asp-items=@(new List<SelectListItem> { new SelectListItem {Text="VC Mode",Value="1" } ,new SelectListItem {Text="Non-VC Mode",Value="2" }} ) class="form-control"/>
+                            <option>SELECT Meeting Mode</option>*@
+                        @*<span asp-validation-for="MeetingMode" class="text-danger"></span>*@
+                    </div>
+
+                    <div class="form-group">
                         <label asp-for="Venue" class="control-label"></label>
                         <input asp-for="Venue" class="form-control" />
                         <span asp-validation-for="Venue" class="text-danger"></span>
                     </div>
-                    @*<div class="form-group">
-            <label asp-for="Status" class="control-label"></label>
-            <input asp-for="Status" class="form-control" />
-            <span asp-validation-for="Status" class="text-danger"></span>
-        </div>*@
+                    <div class="form-group">
+                        <label asp-for="Remarks" class="control-label"></label>
+                        <textarea asp-for="Remarks" class="form-control"></textarea>
+                        <span asp-validation-for="Remarks" class="text-danger"></span>
+                    </div>
                 </div>
             </div>
             <div class="form-group">

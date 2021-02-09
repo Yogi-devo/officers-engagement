@@ -309,7 +309,19 @@ namespace OfficerEngagement.Migrations
                     b.Property<DateTime>("Date")
                         .HasColumnType("datetime2");
 
+                    b.Property<string>("DateOfEntry")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("MeetingMode")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("OfficerName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("OtherParticipant")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Remarks")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("Status")

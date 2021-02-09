@@ -78,24 +78,37 @@ namespace OfficerEngagement.Controllers
         [Authorize]
         public IActionResult AddOrEdit(int id=0)
         {
-            return View(new Engagement());
+           // ViewBag.Message = TempData["Message"];
+            Engagement eng = new Engagement();
+            eng.Date = DateTime.Today;
+            return View(eng);
+
         }
 
         // POST: Engagement/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+
+       
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("EngId,OfficerName,Date,Time,Venue,ChairBy,Agenda,Status")] Engagement engagement)
+        public async Task<IActionResult> Create([Bind("EngId,OfficerName,Date,Time,Venue,ChairBy,Agenda,Status,MeetingMode,OtherParticipant,Remarks")] Engagement engagement)
         {
-
+            
             if (ModelState.IsValid)
             {
+
                 _context.Add(engagement);
                 await _context.SaveChangesAsync();
+                TempData["Message"] = " ";
                 return RedirectToAction(nameof(Index));
+               
+                ViewBag.Message = TempData["Message"];
             }
+            
+           
             return View(engagement);
+           
         }
 
         // GET: Engagement/Edit/5
@@ -120,7 +133,7 @@ namespace OfficerEngagement.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("EngId,OfficerName,Date,Time,Venue,ChairBy,Agenda,Status")] Engagement engagement)
+        public async Task<IActionResult> Edit(int id, [Bind("EngId,OfficerName,Date,Time,Venue,ChairBy,Agenda,Status,MeetingMode,OtherParticipant,Remarks")] Engagement engagement)
         {
             if (id != engagement.EngId)
             {

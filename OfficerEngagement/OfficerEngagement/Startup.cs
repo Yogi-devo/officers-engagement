@@ -47,6 +47,7 @@ namespace OfficerEngagement
 
             } );
 
+
             services.AddScoped<IUserClaimsPrincipalFactory<AppilicationUser>, ApplicationUserClaimsPrincipalFactory>();
             services.AddScoped<IUserService, UserService>();
 
@@ -54,8 +55,8 @@ namespace OfficerEngagement
             {
                 config.LoginPath = "/login";
             });
-
-            services.AddRazorPages().AddRazorRuntimeCompilation();
+            services.AddControllersWithViews();
+            services.AddRazorPages();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -81,10 +82,11 @@ namespace OfficerEngagement
 
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapDefaultControllerRoute();
-                //endpoints.MapControllerRoute(
-                //    name: "default",
-                //    pattern: "{controller=Home}/{action=Index}/{id?}");
+                //endpoints.MapDefaultControllerRoute();
+                endpoints.MapControllerRoute(
+                    name: "default",
+                    pattern: "{controller=Home}/{action=Index}/{id?}");
+                endpoints.MapRazorPages();
             });
         }
     }
